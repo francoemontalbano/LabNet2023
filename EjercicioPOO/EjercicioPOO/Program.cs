@@ -22,12 +22,14 @@ namespace EjercicioPOO
                 }
                 catch (FormatException ex)
                 {
-                    Console.WriteLine("\nError: el valor ingresado no es un número válido.");
+                    Console.WriteLine("Error: el valor ingresado no es un número válido.");
                     i--; // para permitir que el usuario ingrese un valor válido para el mismo vehículo nuevamente
                     continue;
                 }
                 transportes.Add(omnibus);
-                Console.WriteLine("\nEl omnibus " + i + " tiene " + omnibus.Pasajeros + " pasajeros");
+                Console.WriteLine("El omnibus " + i + " tiene " + omnibus.Pasajeros + " pasajeros");
+                omnibus.Avanzar();
+                omnibus.Detenerse();
             }
 
             for (int i = 1; i < 6; i++)
@@ -48,6 +50,8 @@ namespace EjercicioPOO
                
                 transportes.Add(taxi);
                 Console.WriteLine("\nEl taxi " + i + " tiene " + taxi.Pasajeros + " pasajeros");
+                taxi.Avanzar();
+                taxi.Detenerse();
             }
 
             Console.ReadKey();
