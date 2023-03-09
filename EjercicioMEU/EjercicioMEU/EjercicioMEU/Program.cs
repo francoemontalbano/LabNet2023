@@ -1,4 +1,7 @@
 ﻿using Ejercicio1;
+using EjercicioMEU;
+using EjercicioMEU.Ejercicio1;
+using EjercicioMEU.Menu;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,27 +14,8 @@ namespace Ejercicio1
     {
         public static void Main(string[] args)
         {
-            try
-            {
-                DivisionException divisionException = new DivisionException();
-
-                Console.WriteLine("Ingrese el numero que será dividido por cero");
-
-                int dividendo = int.Parse(Console.ReadLine());
-
-                divisionException.Division(dividendo);
-            }
-            catch (DivideByZeroException ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            finally
-            {
-                Console.WriteLine("\nFin de la operacion. Presione una tecla para salir");
-
-            }
-
-            Console.ReadKey();
+            Menu menu = new Menu();
+            menu.GetMenu();
         }
     }
 }

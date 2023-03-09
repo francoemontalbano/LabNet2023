@@ -43,12 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DivisionExcepcion.cs" />
+    <Compile Include="DivisionException.cs" />
+    <Compile Include="DivisionExceptionTwo.cs" />
+    <Compile Include="Ejercicio1\ValidarDivision.cs" />
+    <Compile Include="Ejercicio2\ValidarDivisionTwo.cs" />
+    <Compile Include="Ejercicio3\Logic.cs" />
+    <Compile Include="Ejercicio4\LogicCustom.cs" />
+    <Compile Include="ExceptionThree.cs" />
+    <Compile Include="Menu\Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
