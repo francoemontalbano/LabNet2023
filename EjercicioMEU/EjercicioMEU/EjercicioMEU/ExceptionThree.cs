@@ -1,10 +1,5 @@
 ﻿using EjercicioMEU.Ejercicio3;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace EjercicioMEU
 {
@@ -20,12 +15,11 @@ namespace EjercicioMEU
 
                 logic.LogicException();
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                Console.WriteLine($"Se ha producido una excepción: {ex.Message}");
-                Console.WriteLine($"Tipo de excepción: {ex.GetType()}\n");
+                Console.WriteLine($"Mensaje de la excepción: {ex.Message}");
+                Console.WriteLine($"Tipo de la excepción: {ex.GetType()}\n");
             }
-
         }
     }
 }

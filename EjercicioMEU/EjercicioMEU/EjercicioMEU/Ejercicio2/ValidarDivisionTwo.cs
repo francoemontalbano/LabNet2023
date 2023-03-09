@@ -1,9 +1,4 @@
-﻿using Ejercicio1;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace EjercicioMEU
 {
@@ -18,13 +13,12 @@ namespace EjercicioMEU
                 Console.WriteLine("Ingrese el valor del divisor");
 
                 int dividendo = int.Parse(Console.ReadLine());
-                
+
                 Console.WriteLine("Ingrese el valor del dividendo");
 
                 int divisor = int.Parse(Console.ReadLine());
 
                 Console.WriteLine(divisionExceptionTwo.Dividir(dividendo, divisor));
-
             }
             catch (DivideByZeroException ex)
             {
@@ -33,7 +27,7 @@ namespace EjercicioMEU
             catch (FormatException ex)
             {
                 Console.WriteLine($"{ex.Message} Tenes que ingresar numeros ");
-            }   
+            }
             finally
             {
                 Console.WriteLine("\nFin de la operacion. Presione una tecla para salir \n");

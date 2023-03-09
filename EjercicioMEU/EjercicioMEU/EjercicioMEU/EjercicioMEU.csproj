@@ -49,6 +49,7 @@
     <Compile Include="Ejercicio2\ValidarDivisionTwo.cs" />
     <Compile Include="Ejercicio3\Logic.cs" />
     <Compile Include="Ejercicio4\LogicCustom.cs" />
+    <Compile Include="ExceptionFour.cs" />
     <Compile Include="ExceptionThree.cs" />
     <Compile Include="Menu\Menu.cs" />
     <Compile Include="Program.cs" />

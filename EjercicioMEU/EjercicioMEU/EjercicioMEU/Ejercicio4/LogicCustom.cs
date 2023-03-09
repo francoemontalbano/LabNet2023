@@ -1,17 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EjercicioMEU.Ejercicio4
 {
-    public class LogicCustom
+    public class LogicCustom : Exception
     {
-        public void LogicExceptionCustom()
+        public void RealizarExcepcion(string mensajePersonalizado)
         {
-            //throw new 
+            try
+            {
+                throw new ExceptionFour(mensajePersonalizado);
+            }
+            catch (ExceptionFour ex)
+            {
+                Console.WriteLine($"{ex.Message}\n");
+            }
         }
     }
-
 }
