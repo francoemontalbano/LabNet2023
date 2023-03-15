@@ -34,22 +34,8 @@ namespace Ejercicio.EF.Logic
             return newCustomer;
         }
 
-        public Customers Update(Customers newCustomer, int id)
-        {
-            Customers customerAModificar = GetOne(id);
-            customerAModificar.CompanyName = newCustomer.CompanyName;
-            customerAModificar.ContactName = newCustomer.ContactName;
-            customerAModificar.Address = newCustomer.Address;
-            customerAModificar.City = newCustomer.City;
-            customerAModificar.Country = newCustomer.Country;
+       
 
-        }
-
-        public void Delete(int, id)
-        {
-            Customers customerAEliminar = GetOne(id);
-            _northwindContext.Customers.Remove(customerAEliminar);
-            _northwindContext.SaveChanges();
-        }
+       
     }
 }
