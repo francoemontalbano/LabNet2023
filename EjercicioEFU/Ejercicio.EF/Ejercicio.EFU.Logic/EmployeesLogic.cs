@@ -1,11 +1,7 @@
 ﻿using Ejercicio.EFU.Entities;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Ejercicio.EF.Logic
 {
@@ -24,7 +20,6 @@ namespace Ejercicio.EF.Logic
             }
             catch (InvalidOperationException ex)
             {
-                
                 throw new Exception("No se encontró ningún empleado con el ID proporcionado", ex);
             }
         }
@@ -50,8 +45,6 @@ namespace Ejercicio.EF.Logic
             empleadoAModificar.Country = newEmployee.Country;
             _northwindContext.SaveChanges();
             return empleadoAModificar;
-
-
         }
 
         public void Delete(int id)
@@ -60,15 +53,5 @@ namespace Ejercicio.EF.Logic
             _northwindContext.Employees.Remove(empleadoAEliminar);
             _northwindContext.SaveChanges();
         }
-
-
-
-
-
     }
-
-
-
-
-
 }
