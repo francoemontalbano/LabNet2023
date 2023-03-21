@@ -1,0 +1,118 @@
+body {
+	font-family: 'Raleway', sans-serif;
+	font-family: 'Unbounded', cursive;
+	background-color: #f0f0f0;
+	text-align: center;
+	margin-top: 125px;
+	color: white;
+	background-color: #000000;
+}
+
+@keyframes ganarAnimacion {
+	0% {
+		background-color: #00ff00
+	}
+
+	50% {
+		background-color: #93db0e
+	}
+
+	100% {
+		background-color: #00ff00
+	}
+}
+
+@keyframes perderAnimacion {
+	0% {
+		background-color: #ff0000
+	}
+
+	50% {
+		background-color: hsl(54, 93%, 49%)
+	}
+
+	100% {
+		background-color: #ff0000
+	}
+}
+
+.rojo {
+	color: red;
+}
+
+.ganaste {
+	animation: ganarAnimacion 5s linear 3;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	font-size: 24px;
+	color: black;
+	display: flex;
+	border-radius: 28%;
+	border-style: dashed;
+
+}
+
+.perdiste {
+	animation: perderAnimacion 5s linear 3;
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
+	font-size: 24px;
+	color: black;
+	display: flex;
+	border-radius: 10%;
+	border-style: initial;
+
+}
+
+h1 {
+	text-align: center;
+	font-size: 55px;
+}
+
+label {
+	margin-top: 0%;
+	font-size: 23px;
+	display: block;
+	margin-bottom: 10px;
+}
+
+input {
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+button {
+
+	padding: 5px 12px;
+	background-color: #4caf50;
+	color: #fff;
+	border: 1px solid #4caf50;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #3e8e41;
+
+}
+
+#puntaje {
+	font-family: 'Press Start 2P', cursive;
+	font-size: 22px;
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-top: 37px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#reiniciarBtn {
+	margin-top: 30px;
+	font-size: 20px;
+	margin-right: 50px;
+}
+
+#mensaje {
+	font-size: 30px;
+}
