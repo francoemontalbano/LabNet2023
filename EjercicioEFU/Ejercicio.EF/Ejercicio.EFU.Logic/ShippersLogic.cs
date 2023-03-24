@@ -44,5 +44,12 @@ namespace Ejercicio.EF.Logic
             _northwindContext.Shippers.Remove(shipperAEliminar);
             _northwindContext.SaveChanges();
         }
+
+        public bool GetOrdersByShiperId(int shipperId)
+        {
+            return _northwindContext.Orders.Any(o => o.ShipVia == shipperId);
+        }
+
+
     }
 }

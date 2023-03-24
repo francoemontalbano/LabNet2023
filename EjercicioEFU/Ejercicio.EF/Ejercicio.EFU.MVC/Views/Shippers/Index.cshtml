@@ -1,9 +1,9 @@
-﻿@model List<Ejercicio.EFU.MVC.Models.CategoriesViewModel>
+﻿@model List<Ejercicio.EFU.MVC.Models.ShippersViewModel>
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Categorias de productos</h2>
+<h2>Shippers</h2>
 @if (TempData.Peek("ErrorMessage") != null)
 {
     <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
@@ -12,38 +12,38 @@
     <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">CategoryName</th>
-            <th scope="col">Description</th>
+            <th scope="col">CompanyName</th>
+            <th scope="col">Phone</th>
             <th scope="col">Eliminar</th>
             <th scope="col">Editar</th>
         </tr>
     </thead>
     <tbody>
 
-        @foreach (var category in Model)
+        @foreach (var shipper in Model)
         {
             <tr>
                 <td>
-                    @category.Id
+                    @shipper.Id
                 </td>
                 <td>
-                    @category.CategoryName
+                    @shipper.CompanyName
                 </td>
                 <td>
-                    @category.Description
+                    @shipper.Phone
                 </td>
                 <td>
-                    @if (category.CategoriaTieneProductos)
+                    @if (shipper.GetOrdersByShipperId)
                     {
                         <span class="text-danger">@TempData["ErrorMessage"]</span>
                     }
                     else
                     {
-                        @Html.ActionLink("Eliminar", "Eliminar", new { id = category.Id }, new { @class = "btn btn-danger", onclick = "return confirm('¿Estás seguro de que deseas eliminar esta categoría?')" })
+                        @Html.ActionLink("Eliminar", "Eliminar", new { id = shipper.Id }, new { @class = "btn btn-danger", onclick = "return confirm('¿Estás seguro de que deseas eliminar este shipper?')" })
                     }
                 </td>
                 <td>
-                    @Html.ActionLink("Editar", "Editar", new { id = category.Id }, new { @class = "btn btn-warning" })
+                    @Html.ActionLink("Editar", "Editar", new { id = shipper.Id }, new { @class = "btn btn-warning" })
                 </td>
             </tr>
         }
