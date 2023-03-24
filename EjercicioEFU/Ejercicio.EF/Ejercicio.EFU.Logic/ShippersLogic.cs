@@ -1,11 +1,11 @@
 ﻿using Ejercicio.EFU.Entities;
-using System;
+using Ejercicio.EFU.Logic;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Ejercicio.EF.Logic
 {
-    public class ShippersLogic : BaseLogic
+    public class ShippersLogic : BaseLogic, ILogic<Shippers>
     {
         public List<Shippers> GetAll()
         {
@@ -14,14 +14,12 @@ namespace Ejercicio.EF.Logic
 
         public Shippers GetOne(int id)
         {
-            try
+            var shippers = _northwindContext.Shippers.FirstOrDefault(s => s.ShipperID == id);
+            if (shippers == null)
             {
-                return _northwindContext.Shippers.First(s => s.ShipperID.Equals(id));
+                return null;
             }
-            catch (InvalidOperationException ex)
-            {
-                throw new Exception("No se encontró ningún Shipper con el ID proporcionado", ex);
-            }
+            return shippers;
         }
 
         public Shippers Add(Shippers newShipper)

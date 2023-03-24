@@ -1,0 +1,26 @@
+﻿input[type="submit"] {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    margin-top: 15px;
+}
+
+    input[type="submit"]:hover {
+        background-color: #0069d9;
+        border-color: #0062cc;
+        color: #fff;
+    }
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: linear-gradient(to right, black, gray);
+    color: white;
+}
+
+td {
+    color: white;
+}
+
+tr {
+    color: white;
+}
