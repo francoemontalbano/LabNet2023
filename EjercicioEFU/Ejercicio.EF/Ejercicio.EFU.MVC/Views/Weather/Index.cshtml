@@ -1,0 +1,15 @@
+﻿@model Ejercicio.EFU.MVC.ViewModels.WeatherViewModel
+
+
+@{
+    ViewBag.Title = "Clima";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("ShowWeather", "Weather", FormMethod.Post))
+{
+    @Html.TextBox("city", null, new { @class = "form-control", placeholder = "Ingrese el nombre de la ciudad" }) <br />
+    <button type="submit" class="btn btn-primary">Buscar</button>
+}
+

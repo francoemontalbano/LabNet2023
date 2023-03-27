@@ -1,0 +1,25 @@
+﻿@model Ejercicio.EFU.MVC.ViewModels.WeatherViewModel
+
+@{
+    ViewBag.Title = "Weather";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+
+@if (Model != null)
+{
+    <h3>Current Weather in @Model.City</h3>
+    <p>Descripcion: @Model.Description</p>
+    <p>Temperatura: @Model.Temperature °C</p>
+    <p>Humedad: @Model.Humidity %</p>
+    <p>Velocidad del viento: @Model.WindSpeed m/s</p>
+    <a href="@Url.Action("Index", "Weather")" class="btn btn-primary">Volver a buscar</a>
+
+}
+else
+{
+    <p>Ingrese una ciudad valida</p>
+    <a href="@Url.Action("Index", "Weather")" class="btn btn-primary">Volver a buscar</a>
+}
