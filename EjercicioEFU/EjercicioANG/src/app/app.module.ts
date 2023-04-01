@@ -7,6 +7,8 @@ import { ShippersComponent } from './shippers/shippers.component';
 import { RouterModule } from '@angular/router';
 import { ShipperIdComponent } from './shipper-id/shipper-id.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { AddShipperComponent } from './add-shipper/add-shipper.component';
 
 
 
@@ -16,6 +18,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     ShippersComponent,
     ShipperIdComponent,
+    HomeComponent,
+    AddShipperComponent,
   ],
   exports: [RouterModule],
   imports: [

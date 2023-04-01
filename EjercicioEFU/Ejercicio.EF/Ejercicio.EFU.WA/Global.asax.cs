@@ -19,5 +19,6 @@ namespace Ejercicio.EFU.WA
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
     }
 }
