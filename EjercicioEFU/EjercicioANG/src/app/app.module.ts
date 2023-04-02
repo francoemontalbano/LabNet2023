@@ -8,7 +8,8 @@ import { RouterModule } from '@angular/router';
 import { ShipperIdComponent } from './shipper-id/shipper-id.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { AddShipperComponent } from './add-shipper/add-shipper.component';
+import { ShipperAddComponent } from './shipper-add/shipper-add.component';
+import { ShipperDeleteComponent } from './shipper-delete/shipper-delete.component';
 
 
 
@@ -19,7 +20,8 @@ import { AddShipperComponent } from './add-shipper/add-shipper.component';
     ShippersComponent,
     ShipperIdComponent,
     HomeComponent,
-    AddShipperComponent,
+    ShipperAddComponent,
+    ShipperDeleteComponent,
   ],
   exports: [RouterModule],
   imports: [

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Ejercicio.EFU.WA
 {
@@ -7,8 +8,9 @@ namespace Ejercicio.EFU.WA
     {
         public static void Register(HttpConfiguration config)
         {
-            config.MapHttpAttributeRoutes();
 
+
+            config.MapHttpAttributeRoutes();
             var jsonSettings = config.Formatters.JsonFormatter.SerializerSettings;
             jsonSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
 

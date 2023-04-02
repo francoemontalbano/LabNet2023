@@ -3,13 +3,6 @@ import { HttpClient, HttpHeaders  } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Shipper } from '../models/shipper';
 
-
-const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json'
-  })
-};
-
 @Injectable({
   providedIn: 'root'
 })
@@ -26,12 +19,21 @@ export class ShippersService {
     return this.http.get<Shipper[]>(this.apiUrl);
   }
 
-  getShipperById(id: number): Observable<Shipper> {
-    return this.http.get<Shipper>(`${this.apiUrl}/${id}`);
+  getShipperById(shipperId: number): Observable<Shipper> {
+    return this.http.get<Shipper>(`${this.apiUrl}/${shipperId}`);
   }
 
-  addShipper(shipper: Shipper): Observable<Shipper> {
-    return this.http.post<Shipper>(this.apiUrl, shipper, httpOptions);
+  addShipper(shipper: Shipper) {
+    return this.http.post<Shipper>(`${this.apiUrl}/shippers`, shipper);
   }
+
+  updateShipper(shipper: Shipper): Observable<any> {
+    return this.http.put(`${this.apiUrl}/${shipper.shipperId}`, shipper);
+  }
+
+  deleteShipper(shipperId: number): Observable<any> {
+    return this.http.delete(`${this.apiUrl}/${shipperId}`)
+  }
+
 
 }

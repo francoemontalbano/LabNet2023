@@ -18,10 +18,13 @@ export class HomeComponent {
     this.router.navigate(['/shipper-id']);
   }
 
-  addShipper(){
-    this.router.navigate(['/add-shipers'])
+  agregarShipper() {
+    this.router.navigate(['/shippers/add']);
   }
 
+  deleteShipper(){
+    this.router.navigate(['/delete/shipper'])
+  }
 
 
 }

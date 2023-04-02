@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-6 col-md-8 col-sm-10">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title mt-4">Agregar Shipper</h3>
+          </div>
+          <div class="card-body">
+            <form (submit)="addShipper()">
+              <div class="mb-3">
+                <label for="companyName" class="form-label">Company Name:</label>
+                <input type="text" id="companyName" name="companyName" class="form-control" [(ngModel)]="newShipper.CompanyName" required>
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone:</label>
+                <input type="text" id="phone" name="phone" class="form-control" [(ngModel)]="newShipper.Phone" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Agregar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
