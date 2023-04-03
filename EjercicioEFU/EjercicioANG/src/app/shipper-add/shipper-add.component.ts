@@ -36,7 +36,7 @@ export class ShipperAddComponent implements OnInit {
       Swal.fire({
         icon: 'error',
         title: 'Error al añadir el shipper',
-        text: 'Checkea tus datos y volve a intentar',
+        text: 'Datos inválidos. Intentelo nuevamente. Recorda el formato del telefono (xxx) xxx-xxxx ',
         confirmButtonText: 'OK'
       });
     });

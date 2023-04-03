@@ -1,6 +1,25 @@
-  <main>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" routerLink="/shippers">Shippers</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="shipper/:id">Buscar por ID</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/shippers/add">Añadir</a>
+      </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="delete/shipper">Eliminar</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
     <router-outlet></router-outlet>
-  </main>
+
   
   <footer class="bg-light py-3 mt-5">
     <div class="container text-center">

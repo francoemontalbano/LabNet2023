@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ShippersService } from '../Services/shipper.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import Swal from 'sweetalert2';
 
 
@@ -34,8 +34,8 @@ export class ShipperDeleteComponent implements OnInit {
     }, error => {
       Swal.fire({
         icon: 'error',
-        title: 'Error',
-        text: 'Debe ingresar un ID para eliminar'
+        title: 'Error al eliminar el shipper',
+        text: 'Debe ingresar un ID existente para eliminar. Intentelo nuevamente'
       });
     });
   }

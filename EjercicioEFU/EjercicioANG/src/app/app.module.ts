@@ -12,8 +12,6 @@ import { ShipperAddComponent } from './shipper-add/shipper-add.component';
 import { ShipperDeleteComponent } from './shipper-delete/shipper-delete.component';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

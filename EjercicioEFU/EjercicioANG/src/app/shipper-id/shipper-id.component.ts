@@ -41,8 +41,8 @@ export class ShipperIdComponent implements OnInit {
         console.log(error);
         Swal.fire({
           icon: 'error',
-          title: 'Error',
-          text: 'No se pudo obtener el transportista. Intente nuevamente',
+          title: 'Error al buscar el Shipper',
+          text: 'Debe ingresar un ID existente para buscar. Intentelo nuevamente',
         });
       }
     );

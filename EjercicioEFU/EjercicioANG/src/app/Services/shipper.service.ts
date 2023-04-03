@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders  } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Shipper } from '../models/shipper';
 
@@ -27,8 +27,8 @@ export class ShippersService {
     return this.http.post<Shipper>(`${this.apiUrl}/add`, shipper);
   }
 
-  updateShipper(shipper: Shipper): Observable<any> {
-    return this.http.put(`${this.apiUrl}/update/${shipper.shipperId}`, shipper);
+  updateShipper(shipper: Shipper, shipperId: number): Observable<any> {
+    return this.http.put(`${this.apiUrl}/update/${shipperId}`, shipper);
   }
 
   deleteShipper(shipperId: number): Observable<any> {

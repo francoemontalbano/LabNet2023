@@ -25,6 +25,4 @@ export class HomeComponent {
   deleteShipper(){
     this.router.navigate(['/delete/shipper'])
   }
-
-
 }
