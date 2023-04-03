@@ -32,7 +32,6 @@ export class ShipperIdComponent implements OnInit {
     });
   }
   
-
   getShipperById() {
     this.shippersService.getShipperById(this.shipperId).subscribe(
       response => {

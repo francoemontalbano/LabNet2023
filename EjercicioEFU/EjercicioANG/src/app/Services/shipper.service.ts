@@ -24,15 +24,15 @@ export class ShippersService {
   }
 
   addShipper(shipper: Shipper) {
-    return this.http.post<Shipper>(`${this.apiUrl}/shippers`, shipper);
+    return this.http.post<Shipper>(`${this.apiUrl}/add`, shipper);
   }
 
   updateShipper(shipper: Shipper): Observable<any> {
-    return this.http.put(`${this.apiUrl}/${shipper.shipperId}`, shipper);
+    return this.http.put(`${this.apiUrl}/update/${shipper.shipperId}`, shipper);
   }
 
   deleteShipper(shipperId: number): Observable<any> {
-    return this.http.delete(`${this.apiUrl}/${shipperId}`)
+    return this.http.delete(`${this.apiUrl}/delete/${shipperId}`)
   }
 
 

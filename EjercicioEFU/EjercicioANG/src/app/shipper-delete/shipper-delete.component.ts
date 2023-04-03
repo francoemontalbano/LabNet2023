@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ShippersService } from '../Services/shipper.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import Swal from 'sweetalert2';
+
 
 
 @Component({
@@ -12,7 +14,7 @@ export class ShipperDeleteComponent implements OnInit {
   shipperId: number;
 
   constructor(private route: ActivatedRoute, private shipperService: ShippersService) {
-    this.shipperId = 0; // Puedes poner cualquier valor por defecto que quieras
+    this.shipperId = 0; 
   }
 
   ngOnInit() {
@@ -23,10 +25,18 @@ export class ShipperDeleteComponent implements OnInit {
 
   deleteShipper() {
     this.shipperService.deleteShipper(this.shipperId).subscribe(shipper => {
-      console.log('Shipper deleted successfully:', shipper);
-      // reset form or navigate to shipper list
+      Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        text: 'Shipper eliminado exitosamente!',
+        timer: 3000
+      });
     }, error => {
-      console.error('Error deleting shipper:', error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Debe ingresar un ID para eliminar'
+      });
     });
   }
 }
